@@ -5,6 +5,20 @@
     <title>Home Page</title>
   </head>
   <body>
+<<<<<<< HEAD
     <script src="./scripts/Navbar.js"></script>
+=======
+    <script>
+      $.get("nav.html", function(data){
+      $("#nav-placeholder").replaceWith(data);
+        });
+    </script>
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+      this is a div
+    </div>
+
+    <!--end of Navigation bar-->
+>>>>>>> d1a7b4be0e7fb9c61682ebc93156923845081e51
   </body>
 </html>
