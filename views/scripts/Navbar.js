@@ -6,7 +6,6 @@ var navbar =`
             <img src="../tests/mylogo.png"></img>
         </a>
     </div>
-<<<<<<< HEAD
     <div style="float:right" >
         <ul>
             <li> <a href="/views/homepage.html">Homepage</a> </li>
