@@ -6,9 +6,9 @@ var navbar =`
             <img src="../tests/mylogo.png"></img>
         </a>
     </div>
-    <div style="float:right" >
+    <div style="float:right">
         <ul>
-            <li> <a href="/views/homepage.html">Homepage</a> </li>
+            <li> <a href="../views/homepage.html">Homepage</a> </li>
             <li> <a href="/views/login.html">Login</a> </li>
             <li> <a href="/views/signup.html">Signup</a> </li>
 
