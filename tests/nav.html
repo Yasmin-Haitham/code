@@ -1,24 +1,64 @@
-<link  href="../styles/navbar.css" rel="stylesheet">
-<nav>
-    <div>
-        <a href="/">
-            <img src="mylogo.png"></img>
-        </a>
-    </div>
-    <div style="float:right" >
-        <ul>
-            <li> <a href="../views/homepage.html">Homepage</a> </li>
-            <li> <a href="/views/login.html">Login</a> </li>
-            <li> <a href="/views/signup.html">Signup</a> </li>
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
 
-            <!-- (middleware) need to be authenticated 
-            using jQuery selectors?
-            $("h1#id").method -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-            <li> <a href="/views/user_view.html">Update</a> </li>
-            <li> <a href="/views/library.html">Library</a> </li>
-            <!-- (middleware) need to be authorized -->
-            <li> <a href="/views/members.html">Members</a> </li>
-        </ul>
-    </div>
-</nav>
+    <title>Home Page</title>
+    </head>
+    <body>
+        <link  href="../styles/navbar.css" rel="stylesheet">
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+            
+                <a class="navbar-brand " id="logo" href="#">
+                    <img src="../public/mylogo.png" alt="">
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled"
+                        >Disabled</a
+                        >
+                    </li>
+                    </ul>
+                    <form class="d-flex input-group w-auto">
+                    <input
+                        type="search"
+                        class="form-control"
+                        placeholder="Type query"
+                        aria-label="Search"
+                    />
+                    <button
+                        class="btn btn-outline-primary"
+                        type="button"
+                        data-mdb-ripple-color="dark"
+                    >
+                        Search
+                    </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </body>
+</html>

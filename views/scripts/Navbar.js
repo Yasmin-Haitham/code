@@ -1,26 +1,36 @@
 var navbar =`
 <link  href="../styles/navbar.css" rel="stylesheet">
-<nav>
-    <div>
-        <a href="/">
-            <img src="../tests/mylogo.png"></img>
-        </a>
-    </div>
-    <div style="float:right">
-        <ul>
-            <li> <a href="../views/homepage.html">Homepage</a> </li>
-            <li> <a href="/views/login.html">Login</a> </li>
-            <li> <a href="/views/signup.html">Signup</a> </li>
-
-            <!-- (middleware) need to be authenticated 
-            using jQuery selectors?
-            $("h1#id").method -->
-
-            <li> <a href="/views/user_view.html">Update</a> </li>
-            <li> <a href="/views/library.html">Library</a> </li>
-            <!-- (middleware) need to be authorized -->
-            <li> <a href="/views/members.html">Members</a> </li>
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-light" >
+    <div class="container-fluid">
+        <a class="navbar-brand" id="logo" href="/" style="width = 15%"> <img src="../public/mylogo.png" alt="book logo"/></a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation" display= "flex-end"><span class="navbar-toggler-icon" ></span></button>
+        <div class="collapse jus navbar-collapse " id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link" href="/signup">Signup</a>
+                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/articles">Articals</a>
+                <div>
+                    <form class="d-flex  input-group w-auto">
+                    <input
+                        type="search"
+                        class="form-control"
+                        placeholder="Enter your search"
+                        aria-label="Search"
+                    />
+                    <button
+                        class="btn btn-outline-dark"
+                        type="button"
+                        data-mdb-ripple-color="dark"
+                    >
+                        Search
+                    </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
     </div>
 </nav>`;
 document.body.insertAdjacentHTML("afterbegin",navbar)

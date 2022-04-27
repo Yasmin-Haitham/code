@@ -1,33 +1,6 @@
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline;
-    padding: 15px;
-    border-right: 5px solid rgb(255, 0, 0);
-    
-}
-
-nav li:last-child {
-    border-right: none;
-}
-
-nav div{
-    display: inline-block;
-    line-height: 50px;
-    height: 50px;
-    width: fit-content;
-    margin: 0;
-    padding: 0;
-}
 
 nav{
-    background-color: lightgray;
-    padding: 10px 50px;
-    height: 50px;
+    background-color: rgb(255, 255, 150);
     font-size: 17px;
     letter-spacing: 1px;
     font-family: 'Source Sans Pro', sans-serif;
@@ -36,20 +9,21 @@ nav{
 body{
     margin: 0;
 }
-
-nav img{
-    width: auto;
-    height: 100%;
+.navbar-nav{
+    margin-left: auto;
+}
+#logo{
+    width: 100px;
+}
+a img{
+    width: inherit;
 }
 
-li a{
-    text-decoration: none;
-}
 
-li a:hover {
-    background-color: #111;
+a:hover {
+    background-color: rgb(255, 255, 204);
 }
 
 .active {
-    background-color: #04AA6D;
+    background-color: rgb(255, 255, 204,0.8);
 }
