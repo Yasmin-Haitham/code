@@ -10,7 +10,7 @@ var navbar =`
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
                 <a class="nav-link" href="/signup">Signup</a>
                 <a class="nav-link" href="/login">Login</a>
-                <a class="nav-link" href="/articles">Articals</a>
+                <a class="nav-link" href="/Library">Library</a>
                 <div>
                     <form class="d-flex  input-group w-auto">
                     <input
