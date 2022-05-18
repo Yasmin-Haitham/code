@@ -8,7 +8,9 @@
     <title>Sign up</title>
   </head>
   <body>
-    <script src="./scripts/Navbar.js"></script>
+    <?php
+      include "scripts/Navbar.html"
+    ?>
     <div>
       <!-- NOTE TO SELF 
         enctype allows us to upload images using php later on 
@@ -20,7 +22,7 @@
           <!-- this is the left side LS stands for left side -->
           <div class="col" id="LS">
             <!-- input image -->
-            <div class="row">
+            <div class="col">
               <img src="../public/placeholders/blank-profile-picture-973460_640.webp" id="dp" alt="empty head icon">
             </div>
             <div class="row mt-5">

@@ -9,7 +9,10 @@
     <title>Home Page</title>
   </head>
   <body>
-    <script src="./scripts/Navbar.js"></script>
+    <!-- <script src="./scripts/Navbar.js"></script> -->
+    <?php
+    include "scripts/Navbar.html"
+    ?>
     <div class="m-5" id="text-area">
       <h2>
         About Us
@@ -30,13 +33,13 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../public/slides/first.png" class="d-block w-100" alt="1">
+            <img src="../public/slides/first.png" class="d-block w-50" alt="1">
           </div>
           <div class="carousel-item">
-            <img src="../public/slides/second.2.png" class="d-block w-100" alt="2">
+            <img src="../public/slides/second.2.png" class="d-block w-50" alt="2">
           </div>
           <div class="carousel-item">
-            <img src="../public/slides/third.2.png" class="d-block w-100" alt="3">
+            <img src="../public/slides/third.2.png" class="d-block w-50" alt="3">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

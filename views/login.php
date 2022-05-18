@@ -8,26 +8,28 @@
     <title>Login</title>
   </head>
   <body>
-    <script src="./scripts/Navbar.js"></script>
+  <?php
+    include "scripts/Navbar.html"
+  ?>
     <form action="..." method="POST"></form>
-      <div class="form-input d-flex m-lg-4">
-        <div class="flex-row m-3">
-          <div class="flex-column">
+      <div class="form-input m-lg-4">
+        <div class="row m-3">
+          <div class="column">
             <label for="username" class="form-label">Username:</label>
           </div>
-          <div class="flex-column">
+          <div class="column">
             <input type="text" name="username" class="form-control">
           </div>
         </div>
-        <div class="flex-row m-3">
+        <div class="row m-3">
           <div class="flex-column">
             <label for="password" class="form-label">Password:</label>
           </div>
-          <div class="flex-column">
+          <div class="column">
             <input type="password" name="password" id="password" class="form-control">
           </div>
         </div>
-        <div class="flex-row m-auto">
+        <div class="row m-auto">
           <div class="flex-column-12">
             <button type="submit" class="btn btn-dark w-75 m-5  "> Sign In</button>
           </div>
