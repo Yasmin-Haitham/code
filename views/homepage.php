@@ -9,10 +9,13 @@
     <title>Home Page</title>
   </head>
   <body>
+    
     <!-- <script src="./scripts/Navbar.js"></script> -->
     <?php
-    include "scripts/Navbar.html"
+    include "config/config.php";
+    include "scripts/Navbar.php"
     ?>
+
     <div class="m-5" id="text-area">
       <h2>
         About Us

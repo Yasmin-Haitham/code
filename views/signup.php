@@ -10,7 +10,7 @@
   <body>
     <?php
       include "config/config.php";
-      include "scripts/Navbar.html";
+      include "scripts/Navbar.php";
     ?>
     <div>
       <!-- NOTE TO SELF 

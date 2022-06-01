@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,7 +8,10 @@
     <title>Books</title>
   </head>
   <body>
-    <script src="./scripts/Navbar.js"></script>
+    
+    <?php
+    session_start(); 
+    include "scripts/Navbar.php"?>
     
   </body>
 </html>

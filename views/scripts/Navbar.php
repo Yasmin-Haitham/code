@@ -1,4 +1,4 @@
-<html>
+
 <link  href="../styles/navbar.css" rel="stylesheet">
 
 <nav class="navbar navbar-expand-lg navbar-light" >
@@ -9,9 +9,17 @@
         <div class="collapse jus navbar-collapse " id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="./homepage.php">Home</a>
-                <a class="nav-link" href="./signup.php">Signup</a>
-                <a class="nav-link" href="./login.php">Login</a>
-                <a class="nav-link" href="./Library.php">Library</a>
+                <?php 
+                    
+                    if(!isset($_SESSION['username'])):
+                        echo '<a class="nav-link" href="./signup.php">Signup</a>';
+                        echo '<a class="nav-link" href="./login.php">Login</a>';
+                    else:
+                        echo' <a class="nav-link" href="./Library.php">Library</a>';
+                        echo '<a href="./config/logout.php" class="nav-link" name="logout">Logout</a>';
+                    endif;
+                    
+                ?>
                 <div>
                     <form class="d-flex  input-group w-auto">
                     <input
@@ -31,7 +39,5 @@
                 </div>
             </div>
         </div>
-        
     </div>
 </nav>
-</html>

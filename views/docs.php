@@ -7,6 +7,6 @@
     <title>Documentaries</title>
   </head>
   <body>
-    <script src="./scripts/Navbar.js"></script>
+    <?php include "scripts/Navbar.php"?>
   </body>
 </html>

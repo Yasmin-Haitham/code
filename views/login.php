@@ -10,7 +10,7 @@
   <body>
   <?php
     include "config/config.php";
-    include "scripts/Navbar.html";
+    include "scripts/Navbar.php";
   ?>
     <form action="login.php" method="POST">
       <div class="form-input text-area mx-auto">
