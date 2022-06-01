@@ -21,7 +21,7 @@
       <p>
         This is the website for the public library in the 7th district. We will provide you a place to find all the books to satisfy your eager brains. You will 
         find books that are currently available at the local library for borrowing in the library section, that will be opened once you login. You can view 
-        your account and edit it in the profile section. YOu can request to borrow book online and have your order ready till you come pick it up.
+        your account and edit it in the profile section. You can request to borrow book online and have your order ready till you come pick it up.
       </p>
     </div>
     <div class="m-5" id="text-area">
@@ -31,15 +31,15 @@
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner">
+        <div class="carousel-inner imgStyle ">
           <div class="carousel-item active">
-            <img src="../public/slides/first.png" class="d-block w-50" alt="1">
+            <img src="../public/slides/first.png" class="d-block mx-auto w-75" alt="1">
           </div>
           <div class="carousel-item">
-            <img src="../public/slides/second.2.png" class="d-block w-50" alt="2">
+            <img src="../public/slides/second.2.png" class="d-block mx-auto w-75" alt="2">
           </div>
           <div class="carousel-item">
-            <img src="../public/slides/third.2.png" class="d-block w-50" alt="3">
+            <img src="../public/slides/third.2.png" class="d-block mx-auto w-75" alt="3">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
