@@ -17,10 +17,17 @@
   </head>
   <body>
   <?php
-    
     include "scripts/Navbar.php";
-    $query = "SELECT * FROM `books` WHERE 1";
-    $result = mysqli_query($db,$query);
+    if(isset($_POST['searchbtn'])){
+      if (!isset($_SESSION['username'])) {
+        $_SESSION['msg'] = "You must log in first";
+        header('location: login.php');
+      }
+      $searchVal=mysqli_real_escape_string($db, $_POST['searchVal']);
+      $result = mysqli_query($db,"SELECT * FROM books where BookTitle='$searchVal' ");
+    }else{
+      $query = "SELECT * FROM `books` WHERE 1";
+      $result = mysqli_query($db,$query);}
     if (mysqli_num_rows($result) > 0) {
   ?>
 
@@ -38,13 +45,14 @@
   ?>
 
     <div class="book-card">
-      <span class="book-title"> <?php echo $row["BookTitle"]; ?></span>
+      <span class="book-title">Book Title: <?php echo $row["BookTitle"]; ?></span>
       <div class="book-details">
-        <li><?php echo $row["ISBN"]; ?></li>
-        <li><?php echo $row["BookAuthor"]; ?></li>
-        <li><?php echo $row["Bookgenre"]; ?></li>
-        <li><?php echo $row["BookCopies"]; ?></li>
-        <a href="./config/delete-process.php?ISBN=<?php echo $row["ISBN"]; ?>" class="deletebtn my-5 ">Delete</a>
+        <li>ISBN: <?php echo $row["ISBN"]; ?></li>
+        <li>Author: <?php echo $row["BookAuthor"]; ?></li>
+        <li>Genre: <?php echo $row["Bookgenre"]; ?></li>
+        <li>Number of copies: <?php echo $row["BookCopies"]; ?></li>
+        <br>
+        <a href="./config/delete-process.php?ISBN=<?php echo $row["ISBN"]; ?>" class="deletebtn  ">Delete</a>
       </div>
     </div>
   <?php
@@ -55,5 +63,7 @@ else{
     echo "No Books found";
 }?>
   </div>
+  <br>
+  <?php include './scripts/Footer.php'?>
   </body>
 </html>

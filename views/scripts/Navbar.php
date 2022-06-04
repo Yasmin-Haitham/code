@@ -21,16 +21,18 @@
                     
                 ?>
                 <div>
-                    <form class="d-flex  input-group w-auto">
+                    <form method="POST" action="./library.php" class="d-flex  input-group w-auto">
                     <input
-                        type="search"
+                        type="text"
+                        name="searchVal"
                         class="form-control"
                         placeholder="Enter your search"
                         aria-label="Search"
                     />
                     <button
                         class="btn btn-outline-dark"
-                        type="button"
+                        type="submit"
+                        name="searchbtn"
                         data-mdb-ripple-color="dark"
                     >
                         Search

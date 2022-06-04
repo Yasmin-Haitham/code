@@ -28,11 +28,11 @@
 .deletebtn{
     text-decoration: none;
     border: 1px solid rgb(92, 92, 92);
-    border-radius: 10px;
+    border-radius: 5px;
     color: #fcf5c7;
+    padding: 3px;
     background-color: #7d0202;
-    width: auto;
-    height: auto;
+    align-self: flex-end;
 }
 .mybtn{
     border: 1px solid rgb(92, 92, 92);

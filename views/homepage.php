@@ -55,5 +55,6 @@
         </button>
       </div>
     </div>
+    <?php include './scripts/Footer.php'?>
   </body>
 </html>
