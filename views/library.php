@@ -44,7 +44,7 @@
         <li><?php echo $row["BookAuthor"]; ?></li>
         <li><?php echo $row["Bookgenre"]; ?></li>
         <li><?php echo $row["BookCopies"]; ?></li>
-        <li><a href="./config/delete-process.php?ISBN=<?php echo $row["ISBN"]; ?>" class="deletebtn">Delete</a></li>
+        <a href="./config/delete-process.php?ISBN=<?php echo $row["ISBN"]; ?>" class="deletebtn my-5 ">Delete</a>
       </div>
     </div>
   <?php

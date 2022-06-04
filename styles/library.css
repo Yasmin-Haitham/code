@@ -16,7 +16,7 @@
     padding: 20px;
     background-color: rgb(255, 255, 204);
     width: 300px;
-    height: 400px
+    height: 300px;
 }
 .myctr{
     display: flex;
@@ -24,6 +24,15 @@
     align-content: flex-start;
     justify-content: flex-end;
     align-items: center;
+}
+.deletebtn{
+    text-decoration: none;
+    border: 1px solid rgb(92, 92, 92);
+    border-radius: 10px;
+    color: #fcf5c7;
+    background-color: #7d0202;
+    width: auto;
+    height: auto;
 }
 .mybtn{
     border: 1px solid rgb(92, 92, 92);
@@ -34,12 +43,4 @@
     height: auto;
     text-decoration: none;
     color: black;
-}
-.deletebtn{
-    text-decoration: none;
-    border: 1px solid rgb(92, 92, 92);
-    border-radius: 10px;
-    padding: 10px;
-    color: #fcf5c7;
-    background-color: #7d0202;
 }
