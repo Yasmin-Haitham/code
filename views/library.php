@@ -1,10 +1,10 @@
 <?php 
-  session_start(); 
-
+  include "config/config.php"; 
   if (!isset($_SESSION['username'])) {
   	$_SESSION['msg'] = "You must log in first";
   	header('location: login.php');
   }
+  
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +17,11 @@
   </head>
   <body>
   <?php
-    include "scripts/Navbar.php"
+    
+    include "scripts/Navbar.php";
+    $query = "SELECT * FROM `books` WHERE 1";
+    $result = mysqli_query($db,$query);
+    if (mysqli_num_rows($result) > 0) {
   ?>
 
   <div class="m-3 w-100">
@@ -28,60 +32,28 @@
     <a class="mybtn mx-5 my-2" href="./books.php">Add book</a>
   </div>
   <div class="books-group mx-5">
+  <?php
+    $i=0;
+    while($row = mysqli_fetch_array($result)) {
+  ?>
+
     <div class="book-card">
-      <span class="book-title"> This is the book title</span>
+      <span class="book-title"> <?php echo $row["BookTitle"]; ?></span>
       <div class="book-details">
-        <li>description</li>
-        <li>Author</li>
-        <li>copies</li>
-        <li>genre</li>
+        <li><?php echo $row["ISBN"]; ?></li>
+        <li><?php echo $row["BookAuthor"]; ?></li>
+        <li><?php echo $row["Bookgenre"]; ?></li>
+        <li><?php echo $row["BookCopies"]; ?></li>
+        <li><a href="./config/delete-process.php?ISBN=<?php echo $row["ISBN"]; ?>" class="deletebtn">Delete</a></li>
       </div>
     </div>
-    <div class="book-card">
-      <span class="book-title"> This is the book title</span>
-      <div class="book-details">
-        <li>description</li>
-        <li>Author</li>
-        <li>copies</li>
-        <li>genre</li>
-      </div>
-    </div>
-    <div class="book-card">
-      <span class="book-title"> This is the book title</span>
-      <div class="book-details">
-        <li>description</li>
-        <li>Author</li>
-        <li>copies</li>
-        <li>genre</li>
-      </div>
-    </div>
-    <div class="book-card">
-      <span class="book-title"> This is the book title</span>
-      <div class="book-details">
-        <li>description</li>
-        <li>Author</li>
-        <li>copies</li>
-        <li>genre</li>
-      </div>
-    </div>
-    <div class="book-card">
-      <span class="book-title"> This is the book title</span>
-      <div class="book-details">
-        <li>description</li>
-        <li>Author</li>
-        <li>copies</li>
-        <li>genre</li>
-      </div>
-    </div>
-    <div class="book-card">
-      <span class="book-title"> This is the book title</span>
-      <div class="book-details">
-        <li>description</li>
-        <li>Author</li>
-        <li>copies</li>
-        <li>genre</li>
-      </div>
-    </div>
+  <?php
+    $i++;
+  }
+}
+else{
+    echo "No Books found";
+}?>
   </div>
   </body>
 </html>

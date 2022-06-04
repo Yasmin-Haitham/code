@@ -1,7 +1,7 @@
 
 .books-group{
     display: flex;
-    gap: 100px;
+    gap: 50px;
     flex-wrap: wrap;
     justify-content: flex-start;
     flex-direction: row;
@@ -34,4 +34,12 @@
     height: auto;
     text-decoration: none;
     color: black;
+}
+.deletebtn{
+    text-decoration: none;
+    border: 1px solid rgb(92, 92, 92);
+    border-radius: 10px;
+    padding: 10px;
+    color: #fcf5c7;
+    background-color: #7d0202;
 }

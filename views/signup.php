@@ -9,6 +9,7 @@
   </head>
   <body>
     <?php
+      
       include "config/config.php";
       include "scripts/Navbar.php";
     ?>
