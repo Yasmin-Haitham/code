@@ -16,6 +16,7 @@ if (isset($_POST['reg_user'])) {
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+  $role = "USER";
 
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
@@ -46,8 +47,8 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO users (username, email, password) 
-  			  VALUES('$username', '$email', '$password')";
+  	$query = "INSERT INTO users (username, email, password , role) 
+  			  VALUES('$username', '$email', '$password' , '$role')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
@@ -71,9 +72,11 @@ if (isset($_POST['login_user'])) {
   	$password = md5($password);
   	$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
   	$results = mysqli_query($db, $query);
+    $row = mysqli_fetch_array($results);
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['username'] = $username;
-  	  $_SESSION['success'] = "You are now logged in";
+      $_SESSION['role'] = $row['role'];
+  	  $_SESSION['msg'] = "Logged in";
   	  header('location: library.php');
   	}else {
   		array_push($errors, "Wrong username/password combination");
@@ -82,9 +85,9 @@ if (isset($_POST['login_user'])) {
   mysqli_free_result($result);
 }
 //ADD BOOKS
+
 if(isset($_POST['add_book'])){
   // receive all input values from the form
-  
   $BookTitle = mysqli_real_escape_string($db, $_POST['BookTitle']);
   $ISBN = mysqli_real_escape_string($db, $_POST['ISBN']);
   $BookAuthor = mysqli_real_escape_string($db, $_POST['BookAuthor']);
@@ -114,9 +117,6 @@ if(isset($_POST['add_book'])){
     mysqli_query($db, $query);
     header('location: library.php');
   }
-  mysqli_free_result($result);
-}
-
-
+  mysqli_free_result($result);}
 
 ?>

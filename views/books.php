@@ -1,3 +1,13 @@
+<?php 
+  include "config/config.php"; 
+  if (!($_SESSION['role'] == 'Admin')) {
+  	$_SESSION['msg'] = "Access denied, You are not an Admin";
+  	header('location: library.php');
+  }
+  
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,8 +20,6 @@
   <body>
     
     <?php
-     
-     include "config/config.php";
      include "scripts/Navbar.php";
      ?>
 

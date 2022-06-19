@@ -4,7 +4,11 @@
   	$_SESSION['msg'] = "You must log in first";
   	header('location: login.php');
   }
-  
+  if($_SESSION['msg']=="Access denied, You are not an Admin"){
+    $_SESSION['msg'] = "Logged in";
+    echo '<script> alert("Access denied, You are not an Admin") </script>';
+  }
+  //echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>';
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,6 +35,7 @@
     if (mysqli_num_rows($result) > 0) {
   ?>
 
+
   <div class="m-3 w-100">
     <h1>Books</h1>
   </div>
@@ -52,7 +57,13 @@
         <li>Genre: <?php echo $row["Bookgenre"]; ?></li>
         <li>Number of copies: <?php echo $row["BookCopies"]; ?></li>
         <br>
+        <?php
+        if($_SESSION['role'] == 'Admin'){
+        ?>
         <a href="./config/delete-process.php?ISBN=<?php echo $row["ISBN"]; ?>" class="deletebtn  ">Delete</a>
+        <?php
+          }
+        ?>
       </div>
     </div>
   <?php
