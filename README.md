@@ -5,7 +5,11 @@ To run the project
 - first make sure you have XAMP downloaded and running apache and sql
 - download all code to a single folder to avoid issues with paths
 - set up phpmyadmin with the provided database
-- UserOne is the admin User with password : password
+- UserOne is the admin User with password : PassWord
+- UserTwo is regular user with password: PassWord2
+- UserThree is regular user with password: PassWord3
+- UserFour is regular user with password: PassWord4
+- UserFive is regular user with password: PassWord5
 - users 2 to 5 are regular users
 - database has set 28 books with different genres
 - search bar works with the book's exact name 
